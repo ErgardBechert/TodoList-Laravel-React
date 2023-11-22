@@ -7,7 +7,9 @@ export default defineConfig({
         laravel({
             input: 'resources/js/app.jsx',
             refresh: true,
+
         }),
         react(),
     ],
+
 });
