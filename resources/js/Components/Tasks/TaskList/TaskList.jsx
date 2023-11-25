@@ -1,12 +1,12 @@
 import React from 'react';
-import TaskItem from "@/Components/Tasks/TaskList/TaskItem/TaskItem";
+import TaskItem from "@/Components/Tasks/TaskItem/TaskItem";
 import styles from "./TaskList.module.css"
 
-const TaskList = ({tasks}) => {
+const TaskList = ({tasks, deleteTask}) => {
     return (
         <div className={styles.list}>
             { tasks.map((task) =>
-                <TaskItem status={task.status} id={task.id} title={task.title}/>
+                <TaskItem key={task.id} deleteButton={deleteTask} task={task}/>
             )}
         </div>
     );
